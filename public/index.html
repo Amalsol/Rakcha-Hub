@@ -10,6 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+// Disable common key combinations for viewing source
+document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && (e.key === "u" || e.key === "U")) { // Ctrl+U
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) { // Ctrl+Shift+I (DevTools)
+        e.preventDefault();
+    }
+    if (e.key === "F12") { // F12
+        e.preventDefault();
+    }
+});
+</script>
+
     <div id="login-screen">
         <div class="login-box"><h1>Rakcha Hub</h1><p>Enter your name to access your workspace.</p><input type="text" id="username-input" placeholder="Your Name" autocomplete="off"><button id="login-btn">Enter Hub</button></div>
     </div>
