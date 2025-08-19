@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakcha Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="login-screen">
+        <div class="login-box"><h1>Rakcha Hub</h1><p>Enter your name to access your workspace.</p><input type="text" id="username-input" placeholder="Your Name" autocomplete="off"><button id="login-btn">Enter Hub</button></div>
+    </div>
+    <div id="workspace-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><h1 id="welcome-message"></h1><button id="jam-session-btn">9a3da Pause</button></div>
+            <div class="sidebar-section"><h2>Progress</h2><div id="progress-visuals"><div class="progress-donut" id="progress-donut"><div class="progress-donut-text"><span class="progress-donut-percent" id="donut-percent">0%</span><div class="progress-donut-label">Completed</div></div></div><div class="progress-bars" id="progress-bars"></div></div></div>
+                         <!-- Zen Music Player Section -->
+            <div class="sidebar-section">
+                <h2>Zen Music</h2>
+                <!-- New Dropdown for Genre Selection -->
+                <select id="genre-select" class="genre-selector"></select>
+                
+                <div id="youtube-player-container">
+                    <!-- YouTube player will be embedded here by JavaScript -->
+                </div>
+            </div>
+        </aside>
+        <main class="canvas-area"><header class="canvas-header"><div><button id="add-node-btn">+ Add Node</button></div><div><input type="search" id="search-input" placeholder="Search nodes..."><button id="logout-btn">Logout</button></div></header><div id="canvas"></div></main>
+    </div>
+    <div id="whiteboard-container"><canvas id="whiteboard-canvas"></canvas><div id="whiteboard-toolbar"><button id="exit-jam-btn">&times; Arja3 lock-in</button><div><label>Color</label><input type="color" id="color-picker" value="#2563eb"></div><div><label>Size</label><input type="range" id="brush-size" min="1" max="50" value="5"></div><button id="eraser-btn">Eraser</button><button id="clear-canvas-btn">Clear All</button></div></div>
+    <div id="focus-overlay"><div id="focus-modal"><div id="focus-phase">Lock-in</div><h2 id="focus-title"></h2><div id="focus-timer">25:00</div><button id="exit-focus-btn">W9ayet Pause</button></div></div>
+    <script src="app.js"></script>
+</body>
+</html>
